@@ -15,6 +15,9 @@ namespace PrimeraAPI.Controllers
         }
 
         // GET: api/instruments
+        /// <summary>
+        /// Lista todos los instrumentos.
+        /// </summary>
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
@@ -22,6 +25,9 @@ namespace PrimeraAPI.Controllers
         }
 
         // POST: api/instruments
+        /// <summary>
+        /// Agrega instrumento.
+        /// </summary>
         [HttpPost]
         public ActionResult<string> Post([FromBody] string instrumento)
         {
@@ -33,6 +39,9 @@ namespace PrimeraAPI.Controllers
         }
 
         // PUT: api/instruments/{index}
+        /// <summary>
+        /// Actualiza el nombre de un instrumento segun la posición.
+        /// </summary>
         [HttpPut("{index}")]
         public ActionResult<string> Put(int index, [FromBody] string instrumento)
         {
@@ -44,6 +53,9 @@ namespace PrimeraAPI.Controllers
         }
 
         // DELETE: api/instruments/{index}
+        /// <summary>
+        /// Elimina un instrumento segun la posición.
+        /// </summary>
         [HttpDelete("{index}")]
         public ActionResult<string> Delete(int index)
         {
